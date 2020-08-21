@@ -6,30 +6,58 @@ import $ from 'jquery'
 
 rickMorty.then((personajes) => {
     const person  = document.getElementById('personajes')
-    personajes.forEach(element => {
+    personajes.forEach(e => {
         person.innerHTML +=  `
         
-    <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img id="${element.id}" src="${element.imagen}" class="card-img imagen" alt="image">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body ${element.id}" ">
-          <h5 class="card-title">${element.nombre}</h5>
-          <p class="card-text">${element.genero}</p>
-          <p class="card-text"><small class="text-muted">${element.especies}</small></p>
-          <p class="card-text"><small class="text-muted">${element.estado}</small></p>
-        </div>
-      </div>
-    </div>
-  </div>  `
+                                <div class="card" ;">
+                                <img id="${e.id}" src="${e.imagen}" class="card-img imagen" alt="image">
+                                <div class="card-body  mostrar  ${e.id}" ">
+                                <h5 class="card-title">${e.nombre}</h5>
+                                <p class="card-text">${e.genero}</p>
+                                <p class="card-text"><small class="text-muted">${e.especies}</small></p>
+                                <p class="card-text"><small class="text-muted">${e.estado}</small></p>
+                                </div>
+                            </div>`
         
     });
     
-    $('.imagen').click((e)=>{
-       $(`.${e.target.id}`).css('display', 'block')
-    });
-    console.log(personajes)
+    // $('.imagen').click((e)=>{
+    //    $(`.${e.target.id}`).css('display', 'none')
+    // });
+    
+//         $('.imagen').click((e)=>{
+// console.log(e.target)
+//         //    if (e.target){
+//         //       $(`.${e.target.id}`).css("display", "block");
+//         //    }else{
+//         //       $(`.${e.target.id}`).css("display", "none");
+//         //    }
+//         });
+     
+
+
+// $('.imagen').click((e)=>{
+//     $(`.${e.target.id}`).css("display", "none");
+//   });
+
+// $('.imagen').click((e)=>{
+//     $(`.${e.target.id}`).css("display", "block");
+//   });
+  
+
+
+
+    // $('.imagen').click(function(e){
+    //   $(`.${e.target.id}`).hide();
+    // });
+
+    $('.imagen').click(function(e){
+        $(`.${e.target.id}`).show();
+      });
+
+
+  
+   
+
 
 }).catch((error) => console.log(error))

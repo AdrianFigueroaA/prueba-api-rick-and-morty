@@ -1,18 +1,65 @@
 body {
   background: black;
- 
+ animation: cambioFondo 8s infinite;
+
 }
 
 
-.personaje{
+@keyframes cambioFondo{
+
+0%{
+  background: black;
+}
+50%{
+background: green;
+
+}
+
+70%{
+
+  background: greenyellow;
+}
+
+100%{
+
+  background: black;
+}
+
+}
+
+.logo{
+background-image: url(./img/ricklogo.png);
+background-size: cover;
+background-repeat: no-repeat;
+width: 600px;
+height: 200px;
+margin: auto;
+}
+
+
+
+#personajes{
+  
+  display: inline-flex ;
+  flex-wrap: wrap ;
+  justify-content: center;
+}
+
+.card{
+
+
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.card-body{
+
+.mostrar{
+
+display: block;
+
+}
+
+.ocultar{
+
+
   display: none;
 }
