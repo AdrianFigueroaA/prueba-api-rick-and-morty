@@ -34,6 +34,8 @@ background-repeat: no-repeat;
 width: 600px;
 height: 200px;
 margin: auto;
+margin-bottom: 20px;
+margin-top: 10px;
 }
 
 
@@ -43,12 +45,26 @@ margin: auto;
   display: inline-flex ;
   flex-wrap: wrap ;
   justify-content: center;
+  align-items: flex-start;
 }
+
+
 
 .card{
 
 
   width: 200px;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+  }
+
+
+.card-img ,.imagen{
+
+  border-radius: 50%;
+  pointer-events: none;
+
 }
 
 
