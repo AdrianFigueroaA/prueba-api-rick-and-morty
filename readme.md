@@ -1,7 +1,7 @@
 
 
 ### Rick and Morty 
-(./img/rickmorty.png)
+![screenshot](./img/rickmorty.png)
 
 
 
