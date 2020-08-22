@@ -4,7 +4,19 @@ body {
 
 }
 
+h5{
 
+  font-family: 'Permanent Marker', cursive;
+text-align: center;
+
+}
+
+p{
+
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  text-align: center;
+}
 @keyframes cambioFondo{
 
 0%{
@@ -17,7 +29,7 @@ background: green;
 
 70%{
 
-  background: greenyellow;
+  background: lightseagreen;
 }
 
 100%{
@@ -28,14 +40,14 @@ background: green;
 }
 
 .logo{
-background-image: url(./img/ricklogo.png);
-background-size: cover;
-background-repeat: no-repeat;
-width: 600px;
-height: 200px;
-margin: auto;
-margin-bottom: 20px;
-margin-top: 10px;
+    background-image: url(./img/ricklogo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 
@@ -57,24 +69,45 @@ margin-top: 10px;
   padding: 10px;
   border-radius: 25px;
   margin: 10px;
+  box-shadow: none;
+  transition: box-shadow 0.5s ;
+
+  
   }
 
+
+.card:hover{
+
+box-shadow: 2px 2px 30px 10px greenyellow;
+transition: box-shadow 1s ;
+
+}
+
+.card.mostrar
+{
+
+
+  margin-bottom: -190px;
+z-index: 2;
+box-shadow: 0 0 10px;
+}
 
 .card-img ,.imagen{
 
   border-radius: 50%;
   pointer-events: none;
+  
 
 }
 
 
-.mostrar{
+.mostrar .card-body{
 
 display: block;
 
 }
 
-.ocultar{
+.ocultar .card-body{
 
 
   display: none;
